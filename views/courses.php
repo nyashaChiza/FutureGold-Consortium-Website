@@ -118,6 +118,6 @@ include_once('../views/layouts/navbar.php');
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <?php 
-include_once('../views/layouts/footer.php');  
+<?php 
+  include_once('../views/layouts/footer.php');  
 ?>

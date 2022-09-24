@@ -11,7 +11,7 @@
             4<sup>Th</sup> street<br>
             Mutare <br>
             Zimbabwe<br>
-              <strong>Telephone:</strong> <a href="tel:+263778661538">+263 778 661 538</a><br>
+              <strong>Phone:</strong> <a href="tel:+263778661538">+263 778 661 538</a><br>
               <strong>Telephone:</strong> <a href="tel:+263202063199 ">+263 202 063 199 </a><br>
               <strong>Email:</strong> <a href="mailto:Info@futuregoldconsortium">Info@futuregoldconsortium</a><br>
             </p>
@@ -23,7 +23,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/about.php">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/courses.php">Courses</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../views/blog.php">Blogs</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>

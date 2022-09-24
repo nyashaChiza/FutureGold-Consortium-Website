@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  let forms = document.querySelectorAll('.php-email-form');
+  let forms = document.querySelectorAll('.php-email-form1');
 
   forms.forEach( function(e) {
     e.addEventListener('submit', function(event) {
@@ -64,6 +64,7 @@
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
+        action = 'successful';
         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }
     })
