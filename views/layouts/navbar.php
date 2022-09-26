@@ -52,7 +52,7 @@
           <li><a href="../views/about.php">About</a></li>
           <li><a href="../views/courses.php">Courses</a></li>
           <li><a href="../views/contact.php">Contact</a></li>
-          <li><a href="../forms/blog.php?id=1">Blogs</a></li>
+          <li><a href="../views/blog.php?id=1">Blogs</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
