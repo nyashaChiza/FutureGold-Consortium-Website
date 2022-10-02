@@ -19,9 +19,15 @@ class Contact extends Base{
 
   public function save(){
     $sql = "INSERT INTO `contacts`(`name`,`email`, `subject`,`body`,`created_at`,`other`) VALUES ('$this->name','$this->email','$this->subject','$this->body','$this->date','tunnel vision')";
-    echo $sql;
     $this->db->run_query($sql);
+    $this->url='../views/contact.php?status=1';
+
   }
+  public function url()
+  {
+    return $this->url;
+  }
+
 }
 
 
@@ -37,7 +43,7 @@ if (1) {
     $contact = new Contact($name, $subject, $body, $email);
     $contact->save();
 
-    header("Location: ../");
+    header("Location: ".$contact->url());
 
   }
 

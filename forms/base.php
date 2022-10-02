@@ -5,7 +5,9 @@ class Base{
 
     public $db;
     public $date;
+    public String $url;
     public function __construct(){  
+        $this->url = '';
         $this->db = getConnection();
         $this->date = date("Y-m-d H:i:s");
     }

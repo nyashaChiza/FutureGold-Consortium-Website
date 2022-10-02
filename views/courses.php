@@ -36,7 +36,7 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i> Advanced Market Structure Analysis</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
-                <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
+                <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
                
               </div>
             </div>
@@ -61,7 +61,8 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i>  Role of Banks in the FX Market</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
-                <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
+                <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
+               
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -83,7 +84,8 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i> Understanding the world of cryptocurrencies </li>
                 </ul>
              <hr class='col-md-11 mx-auto' />
-             <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
+             <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
+               
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -107,7 +109,8 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i>  Advanced Technical Analysis Concepts</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
-                <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
+                <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
+               
               </div>
             </div>
           </div> <!-- End Course Item-->

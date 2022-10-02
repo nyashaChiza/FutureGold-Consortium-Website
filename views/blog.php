@@ -111,7 +111,7 @@ include_once('../views/layouts/navbar.php');
           </div>
         </div>
 <div class = 'pt-3'>
-        <a href="../views/write.php" class="write-blog-btn  blockquote">Write Blog</a>
+        <a href="../views/login.php" class="write-blog-btn  blockquote">Write Blog</a>
 </div>
       </div>
     </section><!-- End Cource Details Tabs Section -->

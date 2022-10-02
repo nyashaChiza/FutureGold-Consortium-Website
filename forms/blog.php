@@ -20,8 +20,18 @@ class Blog extends Base{
 
   public function save(){
     $sql = "INSERT INTO `blog`(`name`, `location`, `sub_heading`, `heading`, `body`, `email`, `created_at`) VALUES ('$this->name','$this->location','$this->sub_heading','$this->heading','$this->body','$this->email','$this->date')";
-    $this->db->run_query($sql);
+    $status = $this->db->run_query($sql);
+    if($status){
+      $this->url = '../views/write.php?status=1';
+    }
+    else{
+      $this->url = '../views/write.php?status=0';
+    }
   }
+
+  function url(){
+    return $this->url;
+}
 
 }
 function get_blog($id){
@@ -29,8 +39,7 @@ function get_blog($id){
 
   $sql = "SELECT * FROM `blog` WHERE blog.id ='$id'";
   $blog_data = $db->run_query($sql);
-  echo $sql;
-  print_r($blog_data);
+  return $blog_data;
 
 }
 
@@ -43,16 +52,16 @@ if (1) {
     $sub_heading = $_POST["sub_heading"];
     $heading = $_POST["heading"];
     $body = $_POST["body"];
+    $email = $_POST["email"];
 
-    $blog = new Blog($name,$location, $sub_heading, $heading, $body,  $Location);
+    $blog = new Blog($name,$location, $sub_heading, $heading, $body, $email);
     $blog->save();
-
     
-    header("Location: ../views/blog.php?status=200");
+    header("Location: ".$blog->url());
   }
   elseif ($_GET["id"]){
     $id = $_GET["id"];
-    $data = $blog->get_blog($id);    
+     
 
   }
 

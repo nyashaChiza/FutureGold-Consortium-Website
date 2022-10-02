@@ -8,8 +8,8 @@ include_once('../views/layouts/navbar.php');
   <!-- ======= Breadcrumbs ======= -->
   <div class="breadcrumbs" data-aos="fade-in">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p>get in touch with us, and get an immidiate response</p>
+      <h2>Apply For Course</h2>
+      <p>select a course and apply</p>
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -53,39 +53,52 @@ include_once('../views/layouts/navbar.php');
 
         <div class="col-lg-8 mt-5 mt-lg-0">
 
-          <form action="../forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="../forms/application.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="col-md-6 form-group">
-                <input type="text" name="name" required class="form-control" id="name" maxlength="49" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control" required id="name" maxlength="49" placeholder="your name" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" required class="form-control" name="email" id="email" maxlength="49" placeholder="Your Email" required>
+                <input type="tel" class="form-control" required name="contact" id="contact" maxlength="119" placeholder="Contact" required>
               </div>
             </div>
-            <div class="form-group mt-3">
-              <input type="text" required class="form-control" name="subject" id="subject" maxlength="59" placeholder="Subject" required>
+            <div class="row">
+
+              <div class="col-md-12 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" required name="email" id="email" maxlength="79" placeholder="Your Email" required>
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" required name="body" rows="5" maxlength="2399" placeholder="Message" required></textarea>
-            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <select class='form-control' name='course' id = 'course'>
+                <option class='form-item'  value = '-'>Select Course</option>
+                  <option class='form-item' value = 'Volatility Indices'>Volatility Indices</option>
+                  <option class='form-item' value = 'FX MasterClass Course'>FX MaCryptocurrency MasterClass</option>
+                  <option class='form-item' value = 'Cryptocurrency MasterClass'>Cryptocurrency MasterClass</option>
+                  <option class='form-item' value = 'Advanced FX MasterClass Programs'>Advanced FX MasterClass Programs</option>
+                </select>
+                </div>
+              
+           
             <div class="my-3">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="sent-message">Your blog has been posted. Thank you!</div>
             </div>
-            <div class="text-center py-2">
-              <button type="submit" name='submit' value='contact' class="btn btn-fill btn-primary">Send Message</button>
+            <div class="text-center py-3">
+              <button type="submit" name='submit' value='application' class="btn btn-fill btn-primary">Apply </button>
             </div>
           </form>
-          <?php if(isset($_GET['status'])){?>
+
+           <?php if(isset($_GET['status'])){?>
             <?php if($_GET['status'] ==1){?>
               <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-                Message Sent successfully
+                Application sent successfully
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
           <?php }else{ ?>
             <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-                Message Failed To Send
+                Application Failed To Save
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             <?php } ?>
