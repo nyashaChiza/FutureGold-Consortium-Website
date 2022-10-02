@@ -12,8 +12,8 @@
             Mutare <br>
             Zimbabwe<br>
               <strong>Phone:</strong> <a href="tel:+263778661538">+263 778 661 538</a><br>
-              <strong>Telephone:</strong> <a href="tel:+263202063199 ">+263 202 063 199 </a><br>
-              <strong>Email:</strong> <a href="mailto:Info@futuregoldconsortium">Info@futuregoldconsortium</a><br>
+              <strong>Telephone:</strong> <a href="tel:+263(020)2063199">+263 (020) 2063199 </a><br>
+              <strong>Email:</strong> <a href="mailto:Info@futuregoldconsortium">info@futuregoldconsortium.com</a><br>
             </p>
           </div>
 
@@ -28,6 +28,14 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
+          <div class="col-lg-4 col-md-6 footer-newsletter float-left">
+            <h4>Join Our Newsletter</h4>
+           
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
 
           <div class="col-lg-2 col-md-6 footer-links"></div>
           

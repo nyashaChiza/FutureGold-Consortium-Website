@@ -48,11 +48,11 @@ if (1) {
     $blog->save();
 
     
-    header("Location: ../views/blog.php");
+    header("Location: ../views/blog.php?status=200");
   }
   elseif ($_GET["id"]){
     $id = $_GET["id"];
-    $data = get_blog($id);    
+    $data = $blog->get_blog($id);    
 
   }
 

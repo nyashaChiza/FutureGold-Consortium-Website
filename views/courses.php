@@ -16,8 +16,31 @@ include_once('../views/layouts/navbar.php');
     <!-- ======= Courses Section ======= -->
     <section id="courses" class="courses">
       <div class="container" data-aos="fade-up">
-
+        
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="course-item">
+              <img src="../assets/img/course-2.jpg" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>outline</h4>
+                  <p class="price">$150</p>
+                </div>
+      
+                <h3><a href="course-details.html">Volatility Indices</a></h3>
+               
+                <ul style='list-style-type: none;'>
+                  <li><i class="bi bi-check-circle"></i> Technical Analysis Concepts </li>
+                  <li><i class="bi bi-check-circle"></i> Risk Management</li>
+                  <li><i class="bi bi-check-circle"></i> Developing your own trading strategy</li>
+                  <li><i class="bi bi-check-circle"></i> Advanced Market Structure Analysis</li>
+                </ul>
+                <hr class='col-md-11 mx-auto' />
+                <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
+               
+              </div>
+            </div>
+          </div>
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
@@ -38,7 +61,29 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i>  Role of Banks in the FX Market</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
+                <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="course-item">
+              <img src="../assets/img/course-3.jpg" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>outline</h4>
+                  <p class="price">$350</p>
+                </div>
+
+                <h3><a href="course-details.html">Cryptocurrency MasterClass</a></h3>
                
+                <ul style='list-style-type: none;'>
+                  <li><i class="bi bi-check-circle"></i> Technical Analysis</li>
+                  <li><i class="bi bi-check-circle"></i> Macroeconomics Analysis</li>
+                  <li><i class="bi bi-check-circle"></i> On-chain Data Analysis</li>
+                  <li><i class="bi bi-check-circle"></i> Understanding the world of cryptocurrencies </li>
+                </ul>
+             <hr class='col-md-11 mx-auto' />
+             <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -62,54 +107,12 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i>  Advanced Technical Analysis Concepts</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
+                <div class="text-center"><button class='btn btn-dark' type="submit">Apply</button></div>
               </div>
             </div>
           </div> <!-- End Course Item-->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="../assets/img/course-3.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>outline</h4>
-                  <p class="price">$350</p>
-                </div>
 
-                <h3><a href="course-details.html">Cryptocurrency MasterClass</a></h3>
-               
-                <ul style='list-style-type: none;'>
-                  <li><i class="bi bi-check-circle"></i> Technical Analysis</li>
-                  <li><i class="bi bi-check-circle"></i> Macroeconomics Analysis</li>
-                  <li><i class="bi bi-check-circle"></i> On-chain Data Analysis</li>
-                  <li><i class="bi bi-check-circle"></i> Understanding the world of cryptocurrencies </li>
-                </ul>
-             <hr class='col-md-11 mx-auto' />
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="../assets/img/course-2.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>outline</h4>
-                  <p class="price">$150</p>
-                </div>
-
-                <h3><a href="course-details.html">Volatility Indices</a></h3>
-               
-                <ul style='list-style-type: none;'>
-                  <li><i class="bi bi-check-circle"></i> Technical Analysis Concepts </li>
-                  <li><i class="bi bi-check-circle"></i> Risk Management</li>
-                  <li><i class="bi bi-check-circle"></i> Developing your own trading strategy</li>
-                  <li><i class="bi bi-check-circle"></i> Advanced Market Structure Analysis</li>
-                </ul>
-                <hr class='col-md-11 mx-auto' />
-               
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
