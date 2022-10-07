@@ -24,16 +24,16 @@
               <li><i class="bx bx-chevron-right"></i> <a href="../views/about.php">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/courses.php">Courses</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/blog.php">Blogs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../views/terms.php">Risk and Disclosure Terms</a></li>
+              
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 footer-newsletter float-left">
             <h4>Join Our Newsletter</h4>
            
-            <form action="" method="post">
+            <!-- <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            </form> -->
           </div>
 
 

@@ -29,42 +29,61 @@ class Blog extends Base{
     }
   }
 
+
+
   function url(){
     return $this->url;
 }
 
 }
 function get_blog($id){
+  
   $db = getConnection();
-
   $sql = "SELECT * FROM `blog` WHERE blog.id ='$id'";
   $blog_data = $db->run_query($sql);
-  return $blog_data;
 
+  foreach($blog_data as $value) {
+
+    return $value;
+
+  }
 }
+
+  function get_blogs(){
+    $db = getConnection();
+    $sql = "SELECT * FROM `blog` ORDER BY `blog`.`id` DESC  LIMIT 4";
+    $blogs = $db->run_query($sql);
+
+    return $blogs;
+
+  }
+
+
+
+
 
 #---------------------------------Main Start--------------------------------
 
-if (1) {
-  if ($_POST["submit"] == 'blog') {
-    $name = $_POST["name"];
-    $location = $_POST["location"];
-    $sub_heading = $_POST["sub_heading"];
-    $heading = $_POST["heading"];
-    $body = $_POST["body"];
-    $email = $_POST["email"];
+  if (isset($_POST['submit'])){
+    if ($_POST["submit"] == 'blog') {
+      $name = $_POST["name"];
+      $location = $_POST["location"];
+      $sub_heading = $_POST["sub_heading"];
+      $heading = $_POST["heading"];
+      $body = $_POST["body"];
+      $email = $_POST["email"];
 
-    $blog = new Blog($name,$location, $sub_heading, $heading, $body, $email);
-    $blog->save();
-    
-    header("Location: ".$blog->url());
-  }
-  elseif ($_GET["id"]){
-    $id = $_GET["id"];
-     
-
-  }
-
+      $blog = new Blog($name,$location, $sub_heading, $heading, $body, $email);
+      $blog->save();
+      
+      header("Location: ".$blog->url());
+    }
 }
+//   elseif (isset($_GET["id"])){
+//     $id = $_GET["id"];
+//     echo $id;
+
+//   }
+  
+
 #---------------------------------Main End--------------------------------
-?>
