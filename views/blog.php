@@ -1,8 +1,13 @@
 <?php
 include_once('../views/layouts/navbar.php');
 include_once('../forms/blog.php');
-$article = $_GET['id'];
-$data = get_blog($article);
+if(isset($_GET['id'])){
+  $data = get_blog($_GET['id']);
+}
+else{
+  $data = _get_blog();
+
+}
 $blogs = get_blogs();
 
 ?>
@@ -25,7 +30,7 @@ $blogs = get_blogs();
             <img src="assets/img/course-details.jpg" class="img-fluid" alt="">
             <h3><?php echo $data['sub_heading']; ?></h3>
             <p>
-            <?php echo $data['body']; ?> </p>
+            <?php echo html_entity_decode($data['body']); ?> </p>
           </div>
           <div class="col-lg-4">
 
@@ -75,7 +80,7 @@ $blogs = get_blogs();
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3 class='text-warning'><?php echo $blog['heading'];?></h3>
-                    <p class="fst-italic"><?php echo substr($blog['body'], 0, 80);?>...</p>
+                    <p class="fst-italic"><?php echo substr($blog['body'], 13, 23);?>...</p>
                    </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/course-details-tab-1.png" alt="" class="img-fluid">
@@ -90,7 +95,7 @@ $blogs = get_blogs();
             </div>
           </div>
         </div>
-<div class = 'pt-3'>
+        <div class = 'pt-3'>
         <a href="../views/login.php" class="write-blog-btn  blockquote">Write Blog</a>
 </div>
       </div>

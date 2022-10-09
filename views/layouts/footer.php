@@ -29,7 +29,7 @@
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 footer-newsletter float-left">
-            <h4>Join Our Newsletter</h4>
+            <!-- <h4>Join Our Newsletter</h4> -->
            
             <!-- <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
@@ -76,6 +76,7 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/res/patch.js"></script>
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>

@@ -1,4 +1,5 @@
 <?php
+session_start();
     include_once('base.php');
 
     class Auth extends Base{
@@ -25,7 +26,8 @@
           
             if($auth->num_rows >0){
                 
-                $this->url = '../views/write.php';
+                $this->url = '../views/admin-articles.php';
+                $_SESSION['is_authenticated'] = true;
             }
             else{
                 

@@ -17,10 +17,34 @@ include_once('../views/layouts/navbar.php');
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-          <img class="img-fluid" src='../../assets/img/future gold consortium transparent logo.png '>
+          <div class="col-lg-7 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+          <!-- <img class="img-fluid" src='../../assets/img/future gold consortium transparent logo.png '> -->
+          <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height: 85%;">
+  <div id="tradingview_9a218" style="height: 100%;" ></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:AAPL",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_9a218"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <div class="col-lg-5 pt-4 pt-lg-0 order-2 order-lg-1 content">
           <h3>Mentorship</h3>
 
 

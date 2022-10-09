@@ -30,12 +30,21 @@
             return $this->url;
         }
     }
+    function get_all_applications(){
+      $db = getConnection();
+      $sql = "SELECT * FROM `application` ORDER BY `application`.`id` DESC";  
+      $data = $db->run_query($sql);
+      
+      return $data;
+
+  }
+    
     //-----------------------------------main start-----------------------------
     if ($_POST["submit"] == 'application') {
         $name = $_POST["name"];
-        $subject = $_POST["course"];
-        $body = $_POST["email"];
-        $email = $_POST["contact"];
+        $course = $_POST["course"];
+        $email= $_POST["email"];
+        $contact = $_POST["contact"];
 
         $app = new Application($name, $contact, $email, $course);
         $app->save();

@@ -29,12 +29,33 @@ class Blog extends Base{
     }
   }
 
-
-
-  function url(){
+  public function update($id){
+    $sql = "UPDATE `blog` SET `name`='$this->name',`location`='$this->location',`sub_heading`='$this->sub_heading',`heading`='$this->heading',`body`='$this->body',`email`='$this->email',`created_at`='$this->date' WHERE `id`='$id' ";
+    echo $sql;
+    $status = $this->db->run_query($sql);
+    if($status){
+      $this->url = '../views/admin-articles.php?update-status=1';
+    }
+    else{
+      $this->url = '../views/admin-articles.php?status=0';
+    }
+  }
+  public function url(){
     return $this->url;
 }
 
+}
+function _get_blog(){
+  
+  $db = getConnection();
+  $sql = "SELECT * FROM `blog` ORDER BY `blog`.`id` DESC LIMIT 1;";
+  $blog_data = $db->run_query($sql);
+
+  foreach($blog_data as $value) {
+
+    return $value;
+
+  }
 }
 function get_blog($id){
   
@@ -51,10 +72,28 @@ function get_blog($id){
 
   function get_blogs(){
     $db = getConnection();
-    $sql = "SELECT * FROM `blog` ORDER BY `blog`.`id` DESC  LIMIT 4";
+    $sql = "SELECT * FROM `blog` ORDER BY `blog`.`id` DESC  LIMIT 3";
+    $blogs = $db->run_query($sql);
+    return $blogs;
+
+  }
+
+  function get_all_blogs(){
+    $db = getConnection();
+    $sql = "SELECT * FROM `blog` ORDER BY `blog`.`id` DESC";
     $blogs = $db->run_query($sql);
 
     return $blogs;
+
+  }
+
+  function delete_blog($id){
+    $db = getConnection();
+    $sql = "DELETE FROM `blog` WHERE `id`='$id'";
+    echo $sql;
+    $db->run_query($sql);
+
+    return '../views/admin-articles.php?delete-status=1';
 
   }
 
@@ -66,6 +105,7 @@ function get_blog($id){
 
   if (isset($_POST['submit'])){
     if ($_POST["submit"] == 'blog') {
+      
       $name = $_POST["name"];
       $location = $_POST["location"];
       $sub_heading = $_POST["sub_heading"];
@@ -78,12 +118,36 @@ function get_blog($id){
       
       header("Location: ".$blog->url());
     }
-}
-//   elseif (isset($_GET["id"])){
-//     $id = $_GET["id"];
-//     echo $id;
+    if ($_POST["submit"] == 'update') {
+      $id = $_POST["id"];
+      $name = $_POST["name"];
+      $location = $_POST["location"];
+      $sub_heading = $_POST["sub_heading"];
+      $heading = $_POST["heading"];
+      $body = $_POST["body"];
+      $email = $_POST["email"];
 
-//   }
-  
+      $blog = new Blog($name,$location, $sub_heading, $heading, $body, $email);
+      $blog->update($id);
+
+      header("Location: ".$blog->url());
+      $id = $_GET["id"];
+      
+      header("Location: ".$blog->url());
+      
+      
+    }
+    
+  }
+  if(isset($_GET["action"])){
+  if($_GET["action"] == 'delete'){
+    $id = $_GET["id"];
+    $url = delete_blog($id);
+    header("Location: ".$url);
+
+  }
+}
+
 
 #---------------------------------Main End--------------------------------
+?>
