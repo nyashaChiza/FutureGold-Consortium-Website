@@ -48,6 +48,10 @@ $blogs = get_blogs();
               <h5>email</h5>
               <p><?php echo $data['email']; ?></p>
             </div>
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Created On</h5>
+              <p><?php echo $data['created_at']; ?></p>
+            </div>
 
           </div>
         </div>
