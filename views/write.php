@@ -13,8 +13,8 @@ include_once('../views/layouts/navbar.php');
   <!-- ======= Breadcrumbs ======= -->
   <div class="breadcrumbs" data-aos="fade-in">
     <div class="container">
-      <h2>Write Blog</h2>
-      <p>share your thoughts on our blog page</p>
+      <h2>Write Article</h2>
+      <p>share your thoughts on our Markets page</p>
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -101,19 +101,19 @@ include_once('../views/layouts/navbar.php');
             </div>
           
             <div class="text-center ">
-              <button type="submit" name='submit' value='blog' class="btn btn-fill btn-lg btn-warning">Publish Blog</button>
+              <button type="submit" name='submit' value='blog' class="btn btn-fill btn btn-success">Publish Article</button>
             </div>
           </form>
 
            <?php if(isset($_GET['status'])){?>
             <?php if($_GET['status'] ==1){?>
               <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-                Blog Published successfully
+                Article Published successfully
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
           <?php }else{ ?>
             <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-                Blog Failed To Save
+                Article Failed To Save
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             <?php } ?>

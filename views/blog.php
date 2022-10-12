@@ -35,7 +35,7 @@ $blogs = get_blogs();
           <div class="col-lg-4">
 
             <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Blogger</h5>
+              <h5>Author</h5>
               <p><a href="#"><?php echo $data['name']; ?></a></p>
             </div>
 
@@ -69,39 +69,15 @@ $blogs = get_blogs();
             <li class="nav-item h3 ul">More Articles</li>
             <?php foreach($blogs as $blog){?>   
             <li class="nav-item">
+              <img src='../assets/img/thumbnails/thumb-<?php echo(rand(1,5));?>.jpg' height="25%" width="20%" class='img-fluid thumbnail'>
                 <a class="nav-link active show text-danger" href="blog.php?id=<?php echo $blog['id'];?>"><?php echo $blog['heading'];?></a>
               </li>
-              <?php }?>
-         
+              <?php }?>         
             </ul>
           </div>
-          <div class="col-lg-9 mt-4 mt-lg-0">
-            <div class="tab-content">
-            <?php if(1){?> 
-    
-              <?php foreach($blogs as $blog){?>  
-            <div class="tab-pane active " id="tab-<?php echo $blog['id'];?>">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3 class='text-warning'><?php echo $blog['heading'];?></h3>
-                    <p class="fst-italic"><?php echo substr($blog['body'], 13, 23);?>...</p>
-                   </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/course-details-tab-1.png" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-
-              <?php }?>
-              <?php }?>
-              
-              
-            </div>
-          </div>
+          
         </div>
-        <div class = 'pt-3'>
-        <a href="../views/login.php" class="write-blog-btn  blockquote">Write Blog</a>
-</div>
+        
       </div>
     </section><!-- End Cource Details Tabs Section -->
   </main><!-- End #main -->

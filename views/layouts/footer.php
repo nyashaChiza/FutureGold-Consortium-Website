@@ -25,6 +25,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="../views/courses.php">Courses</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/blog.php">Blogs</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/terms.php">Risk and Disclosure Terms</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../views/login.php">Auth</a></li>
               
             </ul>
           </div>

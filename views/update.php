@@ -69,7 +69,7 @@ $data = get_blog($article);
             <div class="row">
                 <input type="hidden" name="id" value='<?php echo $data['id']; ?>'>
               <div class="col-md-12 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" required name="email" id="email" maxlength="79"value=''  required>
+                <input type="email" class="form-control" required name="email" id="email" maxlength="79" value='<?php echo $data['email']; ?>'  required>
               </div>
             </div>
             <div class="row">
@@ -98,9 +98,10 @@ $data = get_blog($article);
 
     </div>
             </div>
+             </div>
           
             <div class="text-center ">
-              <button type="submit" name='submit' value='update' class="btn btn-fill btn-lg btn-warning">Publish Blog</button>
+              <button type="submit" name='submit' value='update' class="btn btn-fill btn btn-success">Publish Blog</button>
             </div>
           </form>
 

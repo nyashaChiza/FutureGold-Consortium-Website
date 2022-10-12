@@ -9,7 +9,7 @@ include_once('../views/layouts/navbar.php');
   <div class="breadcrumbs" data-aos="fade-in">
     <div class="container">
       <h2>Log In</h2>
-      <p>sign in to create blog </p>
+      <p>sign in to create article </p>
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -51,7 +51,7 @@ include_once('../views/layouts/navbar.php');
 
         </div>
 
-        <div class="col-lg-8 mt-5 mt-lg-0">
+        <div class="col-lg-4 py-4 mt-5 mt-lg-0">
 
           <form action="../forms/auth.php" method="post" role="form" class="php-email-form">
             <div class="row">

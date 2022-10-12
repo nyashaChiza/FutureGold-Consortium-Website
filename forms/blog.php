@@ -31,7 +31,7 @@ class Blog extends Base{
 
   public function update($id){
     $sql = "UPDATE `blog` SET `name`='$this->name',`location`='$this->location',`sub_heading`='$this->sub_heading',`heading`='$this->heading',`body`='$this->body',`email`='$this->email',`created_at`='$this->date' WHERE `id`='$id' ";
-    echo $sql;
+  
     $status = $this->db->run_query($sql);
     if($status){
       $this->url = '../views/admin-articles.php?update-status=1';
@@ -72,7 +72,7 @@ function get_blog($id){
 
   function get_blogs(){
     $db = getConnection();
-    $sql = "SELECT * FROM `blog` ORDER BY `blog`.`id` DESC  LIMIT 3";
+    $sql = "SELECT * FROM `blog` ORDER BY `blog`.`id` DESC  LIMIT 5";
     $blogs = $db->run_query($sql);
     return $blogs;
 

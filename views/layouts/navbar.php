@@ -52,7 +52,7 @@
           <li><a href="../views/about.php">About</a></li>
           <li><a href="../views/courses.php">Courses</a></li>
           <li><a href="../views/contact.php">Contact</a></li>
-          <li><a href="../views/blog.php">Blogs</a></li>
+          <li><a href="../views/blog.php">Markets<i class="bi bi-caret-down-fill"></i></a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

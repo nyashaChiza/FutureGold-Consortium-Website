@@ -166,7 +166,7 @@ include_once('views/layouts/navbar.php');
               
             </div>
             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-              <img src="assets/img/gold.jpg"  class="img-fluid" alt="">
+              <img src="assets/img/prt.jpg"  class="img-fluid" alt="">
             </div>
         </div>
 
