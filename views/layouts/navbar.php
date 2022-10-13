@@ -39,9 +39,9 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header"class="fixed-top">
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-    <img  height="60px" width="50px" src='../../assets/img/thumb-logo.jpeg'>
+      <img height="60px" width="50px" src='../../assets/img/thumb-logo.jpeg'>
       <h1 class="logo me-auto"><a href="../">FutureGold Consortium</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -52,7 +52,19 @@
           <li><a href="../views/about.php">About</a></li>
           <li><a href="../views/courses.php">Courses</a></li>
           <li><a href="../views/contact.php">Contact</a></li>
-          <li><a href="../views/blog.php">Markets<i class="bi bi-caret-down-fill"></i></a></li>
+          <!-- <li><a href="../views/blog.php?category=stocks">Markets<i class="bi bi-caret-down-fill"></i></a></li> -->
+          <li class="dropdown"><a href="#"><span>Markets</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../views/blogs.php?category=stocks">Stocks</a></li>
+             
+              <li><a href="../views/charts.php">Charts</a></li>
+              <li><a href="../views/blogs.php?category=forex">Forex</a></li>
+              <li><a href="../views/blogs.php?category=commodities">Commodities</a></li>
+              <li><a href="../views/blogs.php?category=index">Index</a></li>
+              <li><a href="../views/markets.php">Economic calendar</a></li>
+            </ul>
+          </li>
+          
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

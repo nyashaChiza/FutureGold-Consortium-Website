@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['is_authenticated']){
+if (!$_SESSION['is_authenticated']) {
   header('location: ../views/login.php');
 }
 include_once('../views/layouts/navbar.php');
@@ -38,7 +38,7 @@ include_once('../views/layouts/navbar.php');
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>Info@futuregoldconsortium</p>
+              <p>Info@futuregoldconsortium.com</p>
             </div>
 
             <div class="phone">
@@ -70,6 +70,17 @@ include_once('../views/layouts/navbar.php');
             <div class="row">
 
               <div class="col-md-12 form-group mt-3 mt-md-0">
+                <select class="form-control">
+                <option>Select Category</option>  
+                <option value='economic calendar'>Economic calendar</option>
+                  <option value='charts'>Charts</option>
+                  <option value='forex'>Forex</option>
+                  <option value='commodities'>Commodities</option>
+                  <option class='index'>Index</option>
+                  <option class='stocks'>Stocks</option>
+                </select>
+              </div>
+              <div class="col-md-12 form-group mt-3 mt-md-0">
                 <input type="email" class="form-control" required name="email" id="email" maxlength="79" placeholder="Your Email" required>
               </div>
             </div>
@@ -81,46 +92,48 @@ include_once('../views/layouts/navbar.php');
                 <input type="text" class="form-control" required name="sub_heading" maxlength="59" id="subject" placeholder="sub-heading" required>
               </div>
             </div>
-            <div class="form-group mt-3">  
-      <!--Include the JS & CSS-->
-      <link rel="stylesheet" href="./assets/richtexteditor/rte_theme_default.css" />
-      <script type="text/javascript" src="../assets/richtexteditor/rte.js"></script>
-  <script>RTE_DefaultConfig.url_base='richtexteditor'</script>
-      <script type="text/javascript" src='./assets/richtexteditor/plugins/all_plugins.js'></script>
-      <textarea  maxlength="16379" name='body' id="inp_editor1" ></textarea>
-  
-      <script>
-        var editor1cfg = {}
-        editor1cfg.toolbar = "basic";
-        var editor1 = new RichTextEditor("#inp_editor1"); 
-      </script>
+            <div class="form-group mt-3">
+              <!--Include the JS & CSS-->
+              <link rel="stylesheet" href="./assets/richtexteditor/rte_theme_default.css" />
+              <script type="text/javascript" src="../assets/richtexteditor/rte.js"></script>
+              <script>
+                RTE_DefaultConfig.url_base = 'richtexteditor'
+              </script>
+              <script type="text/javascript" src='./assets/richtexteditor/plugins/all_plugins.js'></script>
+              <textarea maxlength="16379" name='body' id="inp_editor1"></textarea>
 
-    </div>
+              <script>
+                var editor1cfg = {}
+                editor1cfg.toolbar = "basic";
+                var editor1 = new RichTextEditor("#inp_editor1");
+              </script>
 
-    </div>
             </div>
-          
-            <div class="text-center ">
-              <button type="submit" name='submit' value='blog' class="btn btn-fill btn btn-success">Publish Article</button>
-            </div>
-          </form>
 
-           <?php if(isset($_GET['status'])){?>
-            <?php if($_GET['status'] ==1){?>
-              <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-                Article Published successfully
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-          <?php }else{ ?>
-            <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-                Article Failed To Save
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-            <?php } ?>
-            <?php } ?>
         </div>
-
       </div>
+
+      <div class="text-center ">
+        <button type="submit" name='submit' value='blog' class="btn btn-fill btn btn-success">Publish Article</button>
+      </div>
+      </form>
+
+      <?php if (isset($_GET['status'])) { ?>
+        <?php if ($_GET['status'] == 1) { ?>
+          <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            Article Published successfully
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <?php } else { ?>
+          <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            Article Failed To Save
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+
+    </div>
 
     </div>
   </section><!-- End Contact Section -->

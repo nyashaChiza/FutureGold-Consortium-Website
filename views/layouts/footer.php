@@ -23,7 +23,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/about.php">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/courses.php">Courses</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../views/blog.php">Blogs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../views/blog.php">Markets</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/terms.php">Risk and Disclosure Terms</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="../views/login.php">Auth</a></li>
               
@@ -78,6 +78,8 @@
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
   <script src="../assets/res/patch.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>

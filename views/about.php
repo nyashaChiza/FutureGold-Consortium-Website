@@ -18,31 +18,10 @@ include_once('../views/layouts/navbar.php');
 
         <div class="row">
           <div class="col-lg-7 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-          <!-- <img class="img-fluid" src='../../assets/img/future gold consortium transparent logo.png '> -->
-          <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container" style="height: 85%;">
-  <div id="tradingview_9a218" style="height: 100%;" ></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "autosize": true,
-  "symbol": "NASDAQ:AAPL",
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "light",
-  "style": "1",
-  "locale": "en",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "allow_symbol_change": true,
-  "container_id": "tradingview_9a218"
-}
-  );
-  </script>
-</div>
-<!-- TradingView Widget END -->
+          <img class="img-fluid" src='../../assets/img/pexels-christina-morillo-1181406.jpg '>
+          
+          <img class="img-fluid w-100 py-2 float-right px-3" src='../../assets/img/pexels-christina-morillo-1181395.jpg '>
+         
           </div>
           <div class="col-lg-5 pt-4 pt-lg-0 order-2 order-lg-1 content">
           <h3>Mentorship</h3>
@@ -52,17 +31,26 @@ include_once('../views/layouts/navbar.php');
 
 <h3>Market Analysis</h3>
 <p>Our team of experts covers macro and fundamental analysis providing commentaries on key economic drivers influencing the financial markets.</p>
-
+<div class='row'>
+<br><br>
 <h3>Consultancy Services</h3>
 <p>
   <p>FutureGold Consortium offers international financing solutions to major infrastructure projects. We are a mandate to an international financial brokerage registered in the UK representing multinational Lenders and individual investors. The Lending facility extends to both government and private sector projects.</p>
 <p>Our Lender’s primary focus is Mining, distressed assets, Housing, Roads, Water, Energy, oil, Petrochemicals, railways and infrastructure development.</p>
-<h3>Why Choose FutureGold Consortium?</h3>
-<p>We are a leading investment and financial education firm offering a comprehensive guide to FX, Stocks, Cryptocurrency and indices trading. Our team provides cutting-edge strategies and trading methodologies with a holistic approach to successful trading.</p>
+</div>
+<div class='row'>
+  <img class="img-fluid py-4 float-right" src='../../assets/img/pexels-christina-morillo-1181400.jpg '>
+ <br><br>
+  <h3>Why Choose FutureGold Consortium?</h3>
+  <p>We are a leading investment and financial education firm offering a comprehensive guide to FX, Stocks, Cryptocurrency and indices trading. Our team provides cutting-edge strategies and trading methodologies with a holistic approach to successful trading.</p>
 </p>
+</div>
+
+<div class='row'>
+<br><br>
 <h3>The Trading methodology covers</h3>
 <p>FX, Stocks, Indices and Cryptocurrency trading.</p>
-
+</div>
 
           </div>
         </div>

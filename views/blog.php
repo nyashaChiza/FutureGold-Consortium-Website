@@ -1,14 +1,23 @@
 <?php
 include_once('../views/layouts/navbar.php');
 include_once('../forms/blog.php');
+
+$category = $_GET['category'];
+$categories = ['stocks','index', 'charts', 'forex', 'commodities','economic calendar'];
+$is_valid = in_array($category, $categories);
+
+if (!$is_valid){
+  $category = 'stocks';
+}
+
 if(isset($_GET['id'])){
   $data = get_blog($_GET['id']);
 }
 else{
-  $data = _get_blog();
+  $data = _get_blog($category);
 
 }
-$blogs = get_blogs();
+$blogs = get_blogs($category);
 
 ?>
   <main id="main">
@@ -27,6 +36,7 @@ $blogs = get_blogs();
 
         <div class="row">
           <div class="col-lg-8">
+            
             <img src="assets/img/course-details.jpg" class="img-fluid" alt="">
             <h3><?php echo $data['sub_heading']; ?></h3>
             <p>

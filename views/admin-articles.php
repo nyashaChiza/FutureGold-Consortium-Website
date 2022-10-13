@@ -77,7 +77,10 @@ $blogs = get_all_blogs();
           </table>
         </div>
         <div class="col-lg-4">
+        <div class="course-info d-flex justify-content-between align-items-center" style="background: #fcb9472b;;">
+              <h5>Admin</h5>
 
+            </div>
           <a href='../views/admin-articles.php'>
             <div class="course-info d-flex justify-content-between align-items-center" style="background: #ffc107;">
               <h5>Articles</h5>
