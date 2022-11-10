@@ -118,7 +118,7 @@ include_once('views/layouts/navbar.php');
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
                     <h2>B2B Space</h2>
-                    <h6>name</h6>
+                    <h6>Brokage Coverage</h6>
                     <ul class="list-group">
                       <li class="list-group-item">Investing</li>
                       <li class="list-group-item">Advising</li>
@@ -166,7 +166,7 @@ include_once('views/layouts/navbar.php');
               
             </div>
             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-              <img src="assets/img/prt.jpg"  class="img-fluid" alt="">
+              <img src="assets/img/pexels-christina-morillo-1181400.jpg"  class="img-fluid" alt="">
             </div>
         </div>
 

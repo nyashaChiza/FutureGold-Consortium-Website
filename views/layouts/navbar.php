@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../../assets/img/favicon.png" rel="icon">
-  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../../assets/img/favicon.jpeg" rel="icon">
+  <link href="../../assets/img/favicon.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -52,6 +52,7 @@
           <li><a href="../views/about.php">About</a></li>
           <li><a href="../views/courses.php">Courses</a></li>
           <li><a href="../views/contact.php">Contact</a></li>
+          <li><a href="../views/events.php">Events</a></li>
           <!-- <li><a href="../views/blog.php?category=stocks">Markets<i class="bi bi-caret-down-fill"></i></a></li> -->
           <li class="dropdown"><a href="#"><span>Markets</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -64,7 +65,9 @@
               <li><a href="../views/markets.php">Economic calendar</a></li>
             </ul>
           </li>
-          
+          <li><a href="../../admin/index.php">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+</svg></a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

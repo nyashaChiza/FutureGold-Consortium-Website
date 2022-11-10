@@ -43,7 +43,7 @@ class Database {
         return $result;
     }
 }
-
+//Pa$$word@123
 function getConnection() {
     $db = new Database('localhost:3306', 'iom_user', '1234', 'crypto_db');    
     return $db;

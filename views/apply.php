@@ -71,9 +71,9 @@ include_once('../views/layouts/navbar.php');
             <div class="row">
               <div class="col-md-12 form-group">
                 <select class='form-control' name='course' id = 'course'>
-                <option class='form-item'  value = '-'>Select Course</option>
+                  <option class='form-item'  value = '-'>Select Course</option>
                   <option class='form-item' value = 'Volatility Indices'>Volatility Indices</option>
-                  <option class='form-item' value = 'FX MasterClass Course'>FX MaCryptocurrency MasterClass</option>
+                  <option class='form-item' value = 'FX MasterClass Course'>FX Cryptocurrency MasterClass</option>
                   <option class='form-item' value = 'Cryptocurrency MasterClass'>Cryptocurrency MasterClass</option>
                   <option class='form-item' value = 'Advanced FX MasterClass Programs'>Advanced FX MasterClass Programs</option>
                 </select>

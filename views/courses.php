@@ -24,7 +24,7 @@ include_once('../views/layouts/navbar.php');
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>outline</h4>
-                  <p class="price">$150</p>
+                  <p class="price">$300</p>
                 </div>
       
                 <h3><a href="course-details.html">Volatility Indices</a></h3>
@@ -34,6 +34,7 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i> Risk Management</li>
                   <li><i class="bi bi-check-circle"></i> Developing your own trading strategy</li>
                   <li><i class="bi bi-check-circle"></i> Advanced Market Structure Analysis</li>
+                  <li><i class="bi bi-check-circle active"></i> 60 Hours To Complete</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
                 <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
@@ -48,10 +49,10 @@ include_once('../views/layouts/navbar.php');
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>outline</h4>
-                  <p class="price">$250</p>
+                  <p class="price">$600</p>
                 </div>
 
-                <h3><a href="course-details.html">FX MasterClass Course</a></h3>
+                <h3><a href="course-details.html">FX Beginners Course</a></h3>
                
                 <ul style='list-style-type: none;'>
                   <li><i class="bi bi-check-circle"></i> Introduction to FX trading </li>
@@ -59,6 +60,7 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i> Introduction to Economics</li>
                   <li><i class="bi bi-check-circle"></i>  Entry and Exit Technics</li>
                   <li><i class="bi bi-check-circle"></i>  Role of Banks in the FX Market</li>
+                  <li><i class="bi bi-check-circle active"></i> 120 Hours To Complete</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
                 <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
@@ -72,7 +74,7 @@ include_once('../views/layouts/navbar.php');
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>outline</h4>
-                  <p class="price">$350</p>
+                  <p class="price">$450</p>
                 </div>
 
                 <h3><a href="course-details.html">Cryptocurrency MasterClass</a></h3>
@@ -82,6 +84,7 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i> Macroeconomics Analysis</li>
                   <li><i class="bi bi-check-circle"></i> On-chain Data Analysis</li>
                   <li><i class="bi bi-check-circle"></i> Understanding the world of cryptocurrencies </li>
+                  <li><i class="bi bi-check-circle active"></i> 90 Hours To Complete</li>
                 </ul>
              <hr class='col-md-11 mx-auto' />
              <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
@@ -96,7 +99,7 @@ include_once('../views/layouts/navbar.php');
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>outline</h4>
-                  <p class="price">$300</p>
+                  <p class="price">$400</p>
                 </div>
 
                 <h3><a href="course-details.html">Advanced FX MasterClass Programs</a></h3>
@@ -107,6 +110,7 @@ include_once('../views/layouts/navbar.php');
                   <li><i class="bi bi-check-circle"></i> Risk Management Concepts</li>
                   <li><i class="bi bi-check-circle"></i> Macro Economics Analysis</li>
                   <li><i class="bi bi-check-circle"></i>  Advanced Technical Analysis Concepts</li>
+                  <li><i class="bi bi-check-circle active"></i> 80 Hours To Complete</li>
                 </ul>
                 <hr class='col-md-11 mx-auto' />
                 <div class="text-center"><a href='../views/apply.php'><button class='btn btn-dark' type="submit">Apply</button></a></div>
