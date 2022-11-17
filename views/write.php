@@ -61,7 +61,7 @@ include_once('../views/layouts/navbar.php');
           <form action="../forms/blog.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" required id="name" maxlength="49" placeholder="your name" required>
+                <input type="text"   class="form-control" required id="name" maxlength="49" placeholder="your name" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
                 <input type="text" class="form-control" required name="location" id="location" maxlength="119" placeholder="location" required>

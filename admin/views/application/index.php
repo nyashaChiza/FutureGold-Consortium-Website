@@ -1,6 +1,11 @@
 <?php 
 include_once('../../views/layouts/header.php');
 include_once('../../views/layouts/sidebar.php');
+
+include_once('../../../forms/application.php');
+$apps = get_all_applications();
+
+
 ?>
 
 
@@ -23,9 +28,7 @@ include_once('../../views/layouts/sidebar.php');
         <div class="col-lg-10 mx-auto">
           <div class="row">
 
-            <div class='col-md-3 py-2'>
-              <button type="button" class="btn btn-dark">New Application</button>
-          </div>
+           
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
 
@@ -37,49 +40,28 @@ include_once('../../views/layouts/sidebar.php');
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Author</th>
-                        <th scope="col">Title</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Date</th>
-                        <th scope="col">Action</th>
                       </tr>
                     </thead>
                     <tbody>
+                    <?php foreach($apps as $app){?>
                       <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>Brandon Jacob</td>
-                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                        <td>test@email.com</td>
-                        <td>12-07-2022</td>
+                        <th scope="row"><a href="#"><?php echo $app['name']?></a></th>
+                        <td><?php echo $app['contact']?></td>
+                        <td><?php echo $app['course']?></td>
+                        <td><?php echo $app['email']?></td>
+                        <td><?php echo $app['created_at']?></td>
+                        
                       </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
-                        <td>Bridie Kessler</td>
-                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                        <td>test@email.com</td>
-                        <td>12-07-2022</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
-                        <td>Ashleigh Langosh</td>
-                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                        <td>test@email.com</td>
-                        <td>12-07-2022</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Angus Grady</td>
-                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                        <td>test@email.com</td>
-                        <td>12-07-2022</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Raheem Lehner</td>
-                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                        <td>test@email.com</td>
-                        <td>12-07-2022</td>
-                      </tr>
+                      <?php }?>
+                      
+                      
+                      
+                      
                     </tbody>
                   </table>
 

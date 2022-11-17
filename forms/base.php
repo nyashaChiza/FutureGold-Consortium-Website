@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
+include_once('../../db/connection.php');
 include_once('../db/connection.php');
 
 class Base{

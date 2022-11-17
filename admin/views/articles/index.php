@@ -1,12 +1,40 @@
 <?php 
+// session_start();
+// if (!$_SESSION['is_authenticated']) {
+//   header('location: ../views/login.php');
+// }
 include_once('../../../admin/views/layouts/header.php');
-
 include_once('../../../admin/views/layouts/sidebar.php');
+
+include_once('../../../admin/controllers/blog.php');
+$blogs = get_all_blogs();
+$stats = get_post_stats();
+
+
+
 ?>
 
 
 
   <main id="main" class="main">
+
+  <?php if (isset($_GET['status'])) { ?>
+      <?php if ($_GET['status'] == 1) { ?>
+  <div class="alert alert-success col-md-10 mx-auto bg-success text-light border-0 alert-dismissible fade show" role="alert">
+        Article Saved successfully
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php }
+    } ?>
+
+<?php if (isset($_GET['update-status'])) { ?>
+      <?php if ($_GET['update-status'] == 1) { ?>
+  <div class="alert alert-success col-md-10 mx-auto bg-success text-light border-0 alert-dismissible fade show" role="alert">
+        Article Updated successfully
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php }
+    } ?>
 
     <div class="pagetitle mx-auto">
       <h1>Articles</h1>
@@ -22,10 +50,29 @@ include_once('../../../admin/views/layouts/sidebar.php');
 
         <!-- Left side columns -->
         <div class="col-lg-10 mx-auto">
+          
           <div class="row">
-
+            <div class="card">
+              <div class="card-body d-flex justify-content-around my-3">
+                
+                <button type="button" class="btn btn-warning ">
+                  All <span class="badge bg-white text-dark"><?php echo $stats['all'];?></span>
+                </button>
+              <button type="button" class="btn btn-warning ">
+                Draft <span class="badge bg-white text-dark"><?php echo $stats['drafts'];?></span>
+              </button>
+              <button type="button" class="btn btn-warning ">
+                Pending <span class="badge bg-white text-dark"><?php echo $stats['pending'];?></span>
+              </button>
+              <button type="button" class="btn btn-warning ">
+                Trash <span class="badge bg-white text-dark"><?php echo $stats['trash'];?></span>
+              </button>
+              
+            </div>
+          </div>
+          
+          <span class="py-2"> <a href="views/articles/create.php" class="btn btn-dark">New Article</a></span> 
             <div class='col-md-3 py-2'>
-              <button type="button" class="btn btn-dark">New Article</button>
           </div>
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
@@ -39,47 +86,21 @@ include_once('../../../admin/views/layouts/sidebar.php');
                         
                         <th scope="col">Author</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Date</th>
+                        <th scope="col">Category</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Email</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <?php foreach($blogs as $blog){?>
                       <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>Brandon Jacob</td>
-                        <td>12-07-2022</td>
-                        <td><span class="badge badge-primary bg-primary text-dark rounded-4 py-2 mx-3">pending</span></td>
-                        <td>test@email.com</td>
+                        <th scope="row"><a href="#"><?php echo $blog['name']?></a></th>
+                        <td><?php echo $blog['heading']?></td>
+                        <td><?php echo $blog['category']?></td>
+                        <td><?php echo $blog['status']?></td>
+                        <td><?php echo $blog['email']?></td>
                       </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
-                        <td>Bridie Kessler</td>
-                        <td>12-07-2022</td>
-                        <td><span class="badge badge-primary bg-primary text-dark rounded-4 py-2 mx-3">pending</span></td>
-                        <td>test@email.com</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
-                        <td>Ashleigh Langosh</td>
-                        <td>12-07-2022</td>
-                        <td><span class="badge badge-primary bg-primary text-dark rounded-4 py-2 mx-3">pending</span></td>
-                        <td>test@email.com</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Angus Grady</td>
-                        <td>12-07-2022</td>
-                        <td><span class="badge badge-primary bg-primary text-dark rounded-4 py-2 mx-3">pending</span></td>
-                        <td>test@email.com</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Raheem Lehner</td>
-                        <td>12-07-2022</td>
-                        <td><span class="badge badge-primary bg-primary text-dark rounded-4 py-2 mx-3">pending</span></td>
-                        <td>test@email.com</td>
-                      </tr>
+                      <?php }?>
                     </tbody>
                   </table>
 

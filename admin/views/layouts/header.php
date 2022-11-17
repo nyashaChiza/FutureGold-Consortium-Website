@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../../../admin/assets/img/favicon.jpeg" rel="icon">
+  <link href="../../../assets/img/favicon.jpeg" rel="icon">
   <link href="../../assets/img/favicon.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -35,6 +35,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <link rel="stylesheet" type="text/css" href="trix.css">
+  <script type="text/javascript" src="trix.js"></script>
 </head>
 
 <body>

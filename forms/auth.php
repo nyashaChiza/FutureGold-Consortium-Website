@@ -26,12 +26,12 @@ session_start();
           
             if($auth->num_rows >0){
                 
-                $this->url = '../views/admin-articles.php';
+                $this->url = '../admin/views/index.php';
                 $_SESSION['is_authenticated'] = true;
             }
             else{
                 
-                $this->url = '../views/login.php?status=0.php';
+                $this->url = '../admin/index.php?status=0.php';
             }
         }
 

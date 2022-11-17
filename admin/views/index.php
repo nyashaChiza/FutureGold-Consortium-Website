@@ -1,6 +1,10 @@
 <?php 
 include_once('../views/layouts/header.php');
 include_once('../views/layouts/sidebar.php');
+
+include_once('../../admin/controllers/blog.php');
+$stats = get_stats();
+
 ?>
 
   <main id="main" class="main">
@@ -39,7 +43,7 @@ include_once('../views/layouts/sidebar.php');
                       <i class="bi bi-blockquote-right"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>15</h6>
+                      <h6><?php echo $stats['blogs'];?></h6>
                       <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">updated recently</span>
 
                     </div>
@@ -66,7 +70,7 @@ include_once('../views/layouts/sidebar.php');
                       <i class="bi bi-book"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>4</h6>
+                    <h6><?php echo $stats['courses'];?></h6>
                       <span class="text-success small pt-1 fw-bold"></span><span class="text-muted small pt-2 ps-1">updated recently</span>
 
                     </div>
@@ -94,7 +98,7 @@ include_once('../views/layouts/sidebar.php');
                       <i class="bi bi-card-list"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>12</h6>
+                    <h6><?php echo $stats['applications'];?></h6>
                       <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">updated recently</span>
 
                     </div>
