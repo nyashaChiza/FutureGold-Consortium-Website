@@ -2,7 +2,7 @@
 include_once('../../views/layouts/header.php');
 include_once('../../views/layouts/sidebar.php');
 
-include_once('../../../forms/application.php');
+include_once('../../../admin/controllers/applications.php');
 $apps = get_all_applications();
 
 
@@ -13,7 +13,7 @@ $apps = get_all_applications();
   <main id="main" class="main">
 
     <div class="pagetitle mx-auto">
-      <h1>Application</h1>
+      <h1>Applications</h1>
       <nav>
         <ol class="breadcrumb mx-auto">
           <li class="breadcrumb-item"></li>
@@ -35,7 +35,7 @@ $apps = get_all_applications();
                 
 
                 <div class="card-body">
-                  <h5 class="card-title"> Applications</h5>
+                  <h5 class="card-title"> </h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
@@ -45,6 +45,7 @@ $apps = get_all_applications();
                         <th scope="col">Course</th>
                         <th scope="col">Email</th>
                         <th scope="col">Date</th>
+                        <th scope="col">View</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -55,6 +56,8 @@ $apps = get_all_applications();
                         <td><?php echo $app['course']?></td>
                         <td><?php echo $app['email']?></td>
                         <td><?php echo $app['created_at']?></td>
+                        <td><a href="../../../admin/views/application/view.php?action=view&id=<?php echo $app['id']?>" class="btn btn-dark"><i class="bi bi-arrow-up-right-square"></i></a></td>
+                       
                         
                       </tr>
                       <?php }?>

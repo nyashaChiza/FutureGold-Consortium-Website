@@ -21,7 +21,8 @@ class Articles extends Base {
     }
   
     public function save(){
-      $sql = "INSERT INTO `blog`(`name`, `location`,`category`, `sub_heading`, `heading`, `body`, `email`, `created_at`) VALUES ('$this->name','$this->location','$this->category','$this->sub_heading','$this->heading','$this->body','$this->email','$this->date')";
+  
+      $sql = "INSERT INTO `blog`(`name`, `location`,`category`, `sub_heading`, `heading`, `body`, `email`,`user_id`, `created_at`) VALUES ('$this->name','$this->location','$this->category','$this->sub_heading','$this->heading','$this->body','$this->email',$this->user_id,'$this->date')";
       $status = $this->db->run_query($sql);
       if($status){
         $this->url = '../views/write.php?status=1';
@@ -81,7 +82,7 @@ function get_blog($id){
     function delete_blog($id){
       $db = getConnection();
       $sql = "DELETE FROM `blog` WHERE `id`='$id'";
-      echo $sql;
+  
       $db->run_query($sql);
   
       return '../views/admin-articles.php?delete-status=1';

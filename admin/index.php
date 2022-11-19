@@ -9,9 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../../../assets/img/favicon.jpeg" rel="icon">
+  <link href="../../assets/img/favicon.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -52,6 +51,14 @@
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
               <?php } ?>
+              <?php if (isset($_GET['auth-error'])) { ?>
+                <?php if ($_GET['auth-error'] == 1) {?>
+                <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+                    Please Log In First
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php } ?>
+              <?php } ?>
               <div class="d-flex justify-content-center py-4">
                 <a href="#" class="logo d-flex align-items-center w-auto">
                   <link href="../../assets/img/favicon.jpeg" rel="icon">
@@ -68,7 +75,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form action="../forms/auth.php" method='post' class="row g-3 needs-validation" novalidate>
+                  <form action="../admin/controllers/users.php" method='post' class="row g-3 needs-validation" novalidate>
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>

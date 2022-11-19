@@ -111,13 +111,15 @@ function get_blog($id){
     $sql_pending = "SELECT * FROM `blog` WHERE status = 'pending';";
     $sql_trash = "SELECT * FROM `blog` WHERE status = 'trash';";
     $sql_draft = "SELECT * FROM `blog` WHERE status = 'draft';";
+    $sql_posted = "SELECT * FROM `blog` WHERE status = 'posted';";
     
     $all = $db->run_query($sql_all);
     $pending = $db->run_query($sql_pending);
     $trash = $db->run_query($sql_trash);
     $drafts = $db->run_query($sql_draft);
+    $posted = $db->run_query($sql_posted);
 
-    return array('all' => mysqli_num_rows($all), 'pending' => mysqli_num_rows($pending), 'trash' => mysqli_num_rows($trash), 'drafts'=>mysqli_num_rows($drafts));
+    return array('all' => mysqli_num_rows($all), 'pending' => mysqli_num_rows($pending), 'trash' => mysqli_num_rows($trash), 'drafts'=>mysqli_num_rows($drafts), 'posted'=>mysqli_num_rows($posted));
 
   }
 
@@ -126,7 +128,7 @@ function get_blog($id){
     $sql = "DELETE FROM `blog` WHERE `id`='$id'";
     $db->run_query($sql);
 
-    return '../views/admin-articles.php?delete-status=1';
+    return '../views/articles/index.php?delete-status=1';
 
   }
 

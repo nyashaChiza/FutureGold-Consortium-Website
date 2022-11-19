@@ -1,3 +1,9 @@
+<?php
+session_start();
+if($_SESSION['is_authenticated'] != true){
+ # header("Location: http://localhost:9000/admin/index.php?auth-error=1");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +53,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="../../assets/img/logo.png" alt="">
-        
+
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -57,21 +63,17 @@
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
-        
+
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-         <i class="bi bi-person rounded-circle"></i>
-           
+            <i class="bi bi-person rounded-circle"></i>
+
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-           
-
-          
-
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="../../index.php">
+              <a class="dropdown-item d-flex align-items-center" href="../admin/controllers/users.php?logout=x">
                 <i class="bi bi-box-arrow-right"></i>
                 <span class='text-danger'>Sign Out</span>
               </a>

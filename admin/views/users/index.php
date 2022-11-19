@@ -1,14 +1,14 @@
 <?php 
-// session_start();
+
 // if (!$_SESSION['is_authenticated']) {
 //   header('location: ../views/login.php');
 // }
 include_once('../../../admin/views/layouts/header.php');
 include_once('../../../admin/views/layouts/sidebar.php');
 
-include_once('../../../admin/controllers/blog.php');
-$blogs = get_all_blogs();
-$stats = get_post_stats();
+include_once('../../../admin/controllers/users.php');
+$users = get_all_users();
+
 
 
 
@@ -21,7 +21,7 @@ $stats = get_post_stats();
   <?php if (isset($_GET['status'])) { ?>
       <?php if ($_GET['status'] == 1) { ?>
   <div class="alert alert-success col-md-10 mx-auto bg-warning text-light border-0 alert-dismissible fade show" role="alert">
-        Article Saved Successfully
+        User Saved Successfully
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php }
@@ -30,7 +30,7 @@ $stats = get_post_stats();
 <?php if (isset($_GET['update-status'])) { ?>
       <?php if ($_GET['update-status'] == 1) { ?>
   <div class="alert alert-success col-md-10 mx-auto bg-warning text-light border-0 alert-dismissible fade show" role="alert">
-        Article Updated Successfully
+        User Updated Successfully
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php }
@@ -39,14 +39,14 @@ $stats = get_post_stats();
 <?php if (isset($_GET['delete-status'])) { ?>
       <?php if ($_GET['delete-status'] == 1) { ?>
   <div class="alert alert-success col-md-10 mx-auto bg-warning text-light border-0 alert-dismissible fade show" role="alert">
-        Article Deleted Successfully
+        User Deleted Successfully
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php }
     } ?>
 
     <div class="pagetitle mx-3">
-      <h1>Articles</h1>
+      <h1>Users</h1>
       <nav>
         <ol class="breadcrumb mx-auto">
           <li class="breadcrumb-item"></li>
@@ -61,63 +61,41 @@ $stats = get_post_stats();
         <div class="col-lg-10 mx-auto">
           
           <div class="row">
-            <div class="card">
-              <div class="card-body d-flex justify-content-around my-3">
-                
-                <button type="button" class="btn btn-dark">
-                  All <span class="badge bg-white text-dark"><?php echo $stats['all'];?></span>
-                </button>
-                <button type="button" class="btn btn-dark">
-                Posted <span class="badge bg-white text-dark"><?php echo $stats['posted'];?></span>
-              </button>
-              <button type="button" class="btn btn-dark ">
-                Draft <span class="badge bg-white text-dark"><?php echo $stats['drafts'];?></span>
-              </button>
-              <button type="button" class="btn btn-dark ">
-                Pending <span class="badge bg-white text-dark"><?php echo $stats['pending'];?></span>
-              </button>
-              <button type="button" class="btn btn-dark ">
-                Trash <span class="badge bg-white text-dark"><?php echo $stats['trash'];?></span>
-              </button>
-              
-            </div>
-          </div>
+            
           
-         <?php if($_SESSION['current_user']['role'] == 'super-user'){?> <span class="py-2"> <a href="views/articles/create.php" class="btn btn-dark">New Article</a></span> <?php } ?>
+          <?php if ($_SESSION['current_user']['role'] == 'super-user'){?> <td> <span class="py-2"> <a href="views/users/create.php" class="btn btn-dark">Add New User</a></span> <?php } ?>
             <div class='col-md-3 py-2'>
           </div>
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
 
                 <div class="card-body">
-                  <h5 class="card-title"> Articles</h5>
+                  <h5 class="card-title"> Users</h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
                         
-                        <th scope="col">Author</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Status</th>
-                        <?php if ($_SESSION['current_user']['role'] == 'super-user'){?> <th scope="col">Delete</th> <?php } ?>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <?php if ($_SESSION['current_user']['role'] == 'super-user'){?>   <th scope="col">Remove</th> <?php } ?>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach($blogs as $blog){?>
+                      <?php foreach($users as $user){?>
                       <tr>
-                        <th scope="row"><a href="#"><?php echo $blog['name']?></a></th>
-                        <td><?php echo $blog['heading']?></td>
-                        <td><?php echo $blog['category']?></td>
-                        <td><?php echo $blog['status']?></td>
-                      
-                        <?php if ($_SESSION['current_user']['role'] == 'super-user'){?> <td>
-                        <a href="../../../admin/controllers/blog.php?action=delete&id=<?php echo $blog['id']?>" class="btn btn-danger"><i class="bi bi-x-circle"></i></a>
+                        <th scope="row"><a href="#"><?php echo $user['name']?></a></th>
+                        <td><?php echo $user['email']?></td>
+                        <td><?php echo $user['role']?></td>
+                        <?php if ($_SESSION['current_user']['role'] == 'super-user'){?> 
+                        <td>
+                        <a href="../../../admin/controllers/users.php?action=delete&id=<?php echo $user['id']?>" class="btn btn-danger"><i class="bi bi-x-circle"></i></a>
                         
                        </td>
                        <?php } ?>
                       </tr>
-                      <?php } ?>
+                      <?php }?>
                     </tbody>
                   </table>
 
