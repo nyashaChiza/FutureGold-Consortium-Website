@@ -26,10 +26,10 @@ class Blog extends Base{
     $sql = "INSERT INTO `blog`(`name`, `location`,`category`, `sub_heading`, `heading`, `body`, `email`,`status`, `created_at`) VALUES ('$this->name','$this->location','$this->category','$this->sub_heading','$this->heading','$this->body','$this->email','$this->status', '$this->date')";
     $status = $this->db->run_query($sql);
     if($status){
-      $this->url = '../../admin/views/articles/index.php?status=1';
+      $this->url = 'admin/views/articles/index.php?status=1';
     }
     else{
-      $this->url = '../../admin/views/articles/index.php?status=0';
+      $this->url = 'admin/views/articles/index.php?status=0';
     }
   }
 
@@ -38,14 +38,14 @@ class Blog extends Base{
   
     $status = $this->db->run_query($sql);
     if($status){
-      $this->url = '../../admin/views/articles/index.php?update-status=1';
+      $this->url = 'admin/views/articles/index.php?update-status=1';
     }
     else{
-      $this->url = '../views/admin-articles.php?status=0';
+      $this->url = 'admin/views/articles/index.php?status=0';
     }
   }
   public function url(){
-    return $this->url;
+    return $this->get_base_url($this->url);
 }
 
 }
@@ -99,7 +99,6 @@ function get_blog($id){
 
     $blogs = $db->run_query($sql_blogs);
     $applications = $db->run_query($sql_applications);
-    #$courses = $db->run_query($sql_courses);
 
     return array('blogs' => mysqli_num_rows($blogs), 'courses' => 4, 'applications' => mysqli_num_rows($applications));
 
@@ -123,25 +122,31 @@ function get_blog($id){
 
   }
 
-  function delete_blog($id){
+  class DeleteBlog extends Base{
+  public int $id;
+  public string $url;
+    public function __construct($id)
+    {
+      $this->id = $id;
+    }
+  public function delete_blog(){
     $db = getConnection();
-    $sql = "DELETE FROM `blog` WHERE `id`='$id'";
+    $sql = "DELETE FROM `blog` WHERE `id`='$this->id'";
     $db->run_query($sql);
 
-    return '../views/articles/index.php?delete-status=1';
+    $this->url = '/views/articles/index.php?delete-status=1';
 
   }
-
-
-
-
+  public function url(){
+    return $this->get_base_url($this->url);
+}
+}
 
 #---------------------------------Main Start--------------------------------
 
 
   if (isset($_POST['submit'])){
     if ($_POST["submit"] == 'blog') {
-      echo 'mu codoition';
       $name = $_POST["name"];
       $location = $_POST["location"];
       $sub_heading = $_POST["sub_heading"];
@@ -153,7 +158,6 @@ function get_blog($id){
 
       $blog = new Blog($name,$location,$category ,$sub_heading, $heading, $body, $email, $status);
       $blog->save();
-      
       header("Location: ".$blog->url());
     }
     if ($_POST["submit"] == 'update') {
@@ -171,9 +175,6 @@ function get_blog($id){
       $blog->update($id);
 
       header("Location: ".$blog->url());
-      $id = $_GET["id"];
-      
-      header("Location: ".$blog->url());
       
       
     }
@@ -182,8 +183,9 @@ function get_blog($id){
   if(isset($_GET["action"])){
   if($_GET["action"] == 'delete'){
     $id = $_GET["id"];
-    $url = delete_blog($id);
-    header("Location: ".$url);
+    $blog = new DeleteBlog($id);
+    
+    header("Location: ".$blog->url);
 
   }
 }

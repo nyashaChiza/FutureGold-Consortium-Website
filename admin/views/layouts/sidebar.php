@@ -6,35 +6,35 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="views/index.php">
+        <a class="nav-link " href="../../admin/views/index.php">
           <i class="bi bi-grid"></i>
           <span>Dashboard - <?php echo($_SESSION['current_user']['name']);?></span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="views/articles/index.php">
+        <a class="nav-link collapsed" href="../../admin/views/articles/index.php">
           <i class="bi bi-journal-text"></i><span>Articles</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         
       </li>
       
       <li class="nav-item">
-        <a class="nav-link collapsed"   href="views/application/index.php">
+        <a class="nav-link collapsed"   href="../../admin/views/application/index.php">
           <i class="bi bi-journal-text"></i><span>Applications</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed"   href="views/users/index.php">
+        <a class="nav-link collapsed"   href="../../admin/views/users/index.php">
           <i class="bi bi-journal-text"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed"   href="calendar/index.php">
+        <a class="nav-link collapsed"   href="../../admin/calendar/index.php">
           <i class="bi bi-journal-text"></i><span>Calendar</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         

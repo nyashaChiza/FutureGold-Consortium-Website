@@ -63,7 +63,7 @@ $users = get_all_users();
           <div class="row">
             
           
-          <?php if ($_SESSION['current_user']['role'] == 'super-user'){?> <td> <span class="py-2"> <a href="views/users/create.php" class="btn btn-dark">Add New User</a></span> <?php } ?>
+          <?php if (1){?> <td> <span class="py-2"> <a href="../../admin/views/users/create.php" class="btn btn-dark">Add New User</a></span> <?php } ?>
             <div class='col-md-3 py-2'>
           </div>
             <div class="col-12">
@@ -79,6 +79,7 @@ $users = get_all_users();
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Role</th>
+                        <th scope="col">View</th>
                         <?php if ($_SESSION['current_user']['role'] == 'super-user'){?>   <th scope="col">Remove</th> <?php } ?>
                       </tr>
                     </thead>
@@ -88,6 +89,10 @@ $users = get_all_users();
                         <th scope="row"><a href="#"><?php echo $user['name']?></a></th>
                         <td><?php echo $user['email']?></td>
                         <td><?php echo $user['role']?></td>
+                      
+                        <td><a href="../../../admin/views/users/view.php?action=view&id=<?php echo $user['id']?>" class="btn btn-dark"><i class="bi bi-arrow-up-right-square"></i></a></td>
+
+                       </td>
                         <?php if ($_SESSION['current_user']['role'] == 'super-user'){?> 
                         <td>
                         <a href="../../../admin/controllers/users.php?action=delete&id=<?php echo $user['id']?>" class="btn btn-danger"><i class="bi bi-x-circle"></i></a>

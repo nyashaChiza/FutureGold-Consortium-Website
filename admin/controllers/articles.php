@@ -103,8 +103,8 @@ function get_blog($id){
         $category = $_POST["category"];
   
         $blog = new Blog($name,$location,$category ,$sub_heading, $heading, $body, $email);
-        $blog->save();
-        
+        #$blog->save();
+    
         header("Location: ".$blog->url());
       }
       if ($_POST["submit"] == 'update') {

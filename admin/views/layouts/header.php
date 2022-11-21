@@ -1,5 +1,7 @@
 <?php
-session_start();
+
+        session_start(); 
+   
 if($_SESSION['is_authenticated'] != true){
  # header("Location: http://localhost:9000/admin/index.php?auth-error=1");
 }
@@ -73,7 +75,7 @@ if($_SESSION['is_authenticated'] != true){
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="../admin/controllers/users.php?logout=x">
+              <a class="dropdown-item d-flex align-items-center" href="../../admin/controllers/users.php?logout=x">
                 <i class="bi bi-box-arrow-right"></i>
                 <span class='text-danger'>Sign Out</span>
               </a>

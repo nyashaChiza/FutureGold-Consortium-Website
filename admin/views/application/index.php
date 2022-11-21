@@ -25,7 +25,7 @@ $apps = get_all_applications();
       <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-10 mx-auto">
+        <div class="col-lg-12 mx-auto">
           <div class="row">
 
            
@@ -56,7 +56,7 @@ $apps = get_all_applications();
                         <td><?php echo $app['course']?></td>
                         <td><?php echo $app['email']?></td>
                         <td><?php echo $app['created_at']?></td>
-                        <td><a href="../../../admin/views/application/view.php?action=view&id=<?php echo $app['id']?>" class="btn btn-dark"><i class="bi bi-arrow-up-right-square"></i></a></td>
+                        <td><a href="../../admin/views/application/view.php?action=view&id=<?php echo $app['id']?>" class="btn btn-dark"><i class="bi bi-arrow-up-right-square"></i></a></td>
                        
                         
                       </tr>

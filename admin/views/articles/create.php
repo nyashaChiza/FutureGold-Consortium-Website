@@ -22,7 +22,7 @@ include_once('../../../admin/views/layouts/sidebar.php');
         <div class="card">
           <div class="card-body">
 
-            <form action="http://localhost:9000/admin/controllers/blog.php" method="post" class="row g-3">
+            <form action="../../admin/controllers/blog.php" method="post" class="row g-3">
               <div class="col-md-12">
                 <br>
                 <div class="form-floating">

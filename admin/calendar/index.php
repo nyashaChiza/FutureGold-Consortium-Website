@@ -1,6 +1,8 @@
 
 
+<?php
 
+?>
 
 <link rel="stylesheet" href="fullcalendar/fullcalendar.min.css" />
 <script src="fullcalendar/lib/jquery.min.js"></script>

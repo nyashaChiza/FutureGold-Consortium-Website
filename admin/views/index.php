@@ -36,7 +36,7 @@ $stats = get_stats();
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title"><span>Articles</span></h5>
+                <a href="../../admin/views/articles/index.php">  <h5 class="card-title"><span>Articles</span></h5></a>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -63,7 +63,7 @@ $stats = get_stats();
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title"><span>Courses</span></h5>
+                   <h5 class="card-title"><span>Courses</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -91,7 +91,7 @@ $stats = get_stats();
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title"><span>Applications</span></h5>
+                 <a href="../../admin/views/application/index.php"> <h5 class="card-title"><span>Applications</span></h5></a>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">

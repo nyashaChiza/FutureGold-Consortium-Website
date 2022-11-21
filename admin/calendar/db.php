@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","test","phpsamples") ;
+$conn = mysqli_connect('localhost:3306', 'iom_user', '1234', 'crypto_db') ;
 
 if (!$conn)
 {

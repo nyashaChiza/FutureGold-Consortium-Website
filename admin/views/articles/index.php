@@ -10,8 +10,6 @@ include_once('../../../admin/controllers/blog.php');
 $blogs = get_all_blogs();
 $stats = get_post_stats();
 
-
-
 ?>
 
 
@@ -83,7 +81,7 @@ $stats = get_post_stats();
             </div>
           </div>
           
-         <?php if($_SESSION['current_user']['role'] == 'super-user'){?> <span class="py-2"> <a href="views/articles/create.php" class="btn btn-dark">New Article</a></span> <?php } ?>
+         <?php if($_SESSION['current_user']['role'] == 'super-user'){?> <span class="py-2"> <a href="../../admin/views/articles/create.php" class="btn btn-dark">New Article</a></span> <?php } ?>
             <div class='col-md-3 py-2'>
           </div>
             <div class="col-12">
@@ -106,13 +104,13 @@ $stats = get_post_stats();
                     <tbody>
                       <?php foreach($blogs as $blog){?>
                       <tr>
-                        <th scope="row"><a href="#"><?php echo $blog['name']?></a></th>
+                        <th scope="row"><?php echo $blog['name']?></th>
                         <td><?php echo $blog['heading']?></td>
                         <td><?php echo $blog['category']?></td>
                         <td><?php echo $blog['status']?></td>
                       
                         <?php if ($_SESSION['current_user']['role'] == 'super-user'){?> <td>
-                        <a href="../../../admin/controllers/blog.php?action=delete&id=<?php echo $blog['id']?>" class="btn btn-danger"><i class="bi bi-x-circle"></i></a>
+                        <a href="../../admin/controllers/blog.php?action=delete&id=<?php echo $blog['id']?>" class="btn btn-danger"><i class="bi bi-x-circle"></i></a>
                         
                        </td>
                        <?php } ?>
