@@ -1,46 +1,52 @@
 <?php
+session_start();
 include_once('../views/layouts/navbar.php');
 include_once("../forms/requests.php");
 
-// $results = file_get_contents('https://www.eventbriteapi.com/v3/series/15241955098/?token=QJZUZA45G5SFQSPKYER4');
-
-// $results = array(json_decode($results[0][0]));
-
-
-// $description = $results['description']['text'];
-// $start_text = $results['start']['text'];
-// $stop_text = $results['stop']['text'];
-// $logo = $results['logo']['original']['url'];
-// $summary = $results['summary'];
-?>
-<main id="main">
  
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs" data-aos="fade-in">
-      <div class="container">
-        <h2>Events</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
+require_once "../forms/Eventbrite.php"; 
 
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events"> 
-      <div class="container" data-aos="fade-up">
-      <img src="../assets/img/coming-soon.png" class="img-fluid mx-auto" alt="">
-        <div class="row">
-          <!-- <div class="col-md-6 d-flex align-items-stretch">
+$authentication_tokens = array('app_key'  => 'NUVIJQI5CI2YATM2JN',
+'user_key' => 'JHZR2RACCU5V2JV26MS3CPZ3WRBTDSWXBHASXSY6HUKIHRNHOR');
+
+
+$url = 'https://www.eventbriteapi.com/v3/organizations/1199095923193/events/?token=QJZUZA45G5SFQSPKYER4';
+
+$resp = file_get_contents($url); // returns true only if http response code < 400
+
+#print_r(json_decode($resp)->events[0]->description->text);
+#print_r(json_decode($resp)->events);
+echo '    <section id="events" class="events"> 
+<div class="container" data-aos="fade-up">
+<div class="row">';
+foreach(json_decode($resp)->events as $event){
+  
+  $title = $event->name->text;
+  $url = $event->url;
+  $start = $event->start->local;
+  $end = $event->end->local;
+  $description = $event->description->text;
+  $summary = $event->summary;
+  
+
+?>
+          <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
                 <img src="../assets/img/pexels-christina-morillo-1181400.jpg" alt="...">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Test Event</a></h5>
-                <p class="fst-italic text-center">test time</p>
-                <p class="card-text">test description</p>
+                <h5 class="card-title"><a target="_blank" href="<?php print_r($url);?> "> <?php print_r($title);?> </a> </h5>
+                <p class="fst-italic text-center"> Start: <?php print_r($start);?></p>
+                <p class="fst-italic text-center"> End: <?php print_r($end);?></p>
+         
+                <p class="card-text"> <?php print_r($summary);?></p>
               </div>
             </div>
-          </div> -->
-          
+          </div>
+          <?php
+}
+          ?>
           
         </div>
 
