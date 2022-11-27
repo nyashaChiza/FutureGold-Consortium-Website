@@ -11,7 +11,7 @@ class Base{
     
     public $date;
     public $db;
-    public $conn;
+
     public int $user_id;
 
     public function __construct(){
@@ -20,34 +20,20 @@ class Base{
         $this->user_id = $_SESSION['current_user']['id'];
     }
 
-    public function run_query(string $query){
-          	
-        $result = mysqli_query($this->conn, $query) or die(mysqli_error($this->conn));
-        
-        if(!$result){
-
-            $result = null;
-            
-        }
-
-        return $result;
-
-    }
-
-    public function safe_input($input) {
+    public function safe_input(string $input) {
         $input = trim($input);
         $input = stripslashes($input);
         $input = htmlspecialchars($input);
         return $input;
       }
-    public function get_base_url($url){
+    public function get_base_url(string $return_url){
         $base = sprintf(
           "%s://%s:9000",
           isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
           $_SERVER['SERVER_NAME'],
           $_SERVER['REQUEST_URI']
         );
-        return $base .'/'. $url;
+        return $base .'/'. $return_url;
       }
 
 }

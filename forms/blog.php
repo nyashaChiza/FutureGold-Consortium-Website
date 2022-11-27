@@ -50,7 +50,7 @@ class Blog extends Base{
 function _get_blog($category){
   
   $db = getConnection();
-  $sql = "SELECT * FROM `blog` WHERE blog.category= '$category' ORDER BY `blog`.`id` DESC LIMIT 1;";
+  $sql = "SELECT * FROM `blog` WHERE blog.category= '$category' and blog.status='post'  ORDER BY `blog`.`id` DESC LIMIT 1;";
   $blog_data = $db->run_query($sql);
 
   foreach($blog_data as $value) {
@@ -74,7 +74,7 @@ function get_blog($id){
 
   function get_blogs($category){
     $db = getConnection();
-    $sql = "SELECT * FROM `blog` WHERE blog.category= '$category' ORDER BY `blog`.`id` DESC LIMIT 5;";
+    $sql = "SELECT * FROM `blog` WHERE blog.category= '$category' and blog.status='post' ORDER BY `blog`.`id` DESC LIMIT 5;";
     $blogs = $db->run_query($sql);
     return $blogs;
 

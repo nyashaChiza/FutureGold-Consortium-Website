@@ -31,11 +31,10 @@ class Database {
         $this->conn = $conn;
     }
     
-    public function run_query($query){
-        
+    public function run_query($query)
+    {
         $this->createConnection();
         $result = mysqli_query($this->conn, $query) or die(mysqli_error($this->conn));
-        
         if(!$result){
             $result = null;
         }

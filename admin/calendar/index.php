@@ -118,7 +118,7 @@ body {
 </style>
 </head>
 <body>
-    <h2> Calendar Event Management </h2><span><a href='http://localhost:9000/admin/views/index.php'>Back</span>
+    <h2> Calendar Event Management </h2>
 
     <div class="response"></div>
     <div id='calendar'></div>

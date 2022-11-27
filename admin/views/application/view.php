@@ -64,6 +64,11 @@ $app = get_application($id)[0];
                   </div>
 
                   <div class="row bg-light py-4">
+                    <div class="col-lg-3 col-md-4 label">Level of Education</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $app['education']; ?></div>
+                  </div>
+
+                  <div class="row bg-light py-4">
                     <div class="col-lg-3 col-md-4 label">Applied On</div>
                     <div class="col-lg-9 col-md-8"><?php echo $app['created_at']; ?></div>
                   </div>

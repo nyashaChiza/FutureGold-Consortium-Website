@@ -122,23 +122,23 @@ function get_blog($id){
 
   }
 
-  class DeleteBlog extends Base{
+  class DeleteBlog extends Base {
   public int $id;
-  public string $url;
+  public string $return_url= 'admin/views/articles/index.php?delete-status=1';
     public function __construct($id)
     {
+ 
       $this->id = $id;
+      parent::__construct();
     }
-  public function delete_blog(){
+  public function delete(){
     $db = getConnection();
     $sql = "DELETE FROM `blog` WHERE `id`='$this->id'";
+
     $db->run_query($sql);
-
-    $this->url = '/views/articles/index.php?delete-status=1';
-
   }
   public function url(){
-    return $this->get_base_url($this->url);
+    return $this->get_base_url($this->return_url);
 }
 }
 
@@ -184,8 +184,8 @@ function get_blog($id){
   if($_GET["action"] == 'delete'){
     $id = $_GET["id"];
     $blog = new DeleteBlog($id);
-    
-    header("Location: ".$blog->url);
+    $blog->delete();
+    header("Location: ".$blog->url());
 
   }
 }
