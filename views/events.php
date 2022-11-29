@@ -6,11 +6,8 @@ include_once("../forms/requests.php");
  
 require_once "../forms/Eventbrite.php"; 
 
-$authentication_tokens = array('app_key'  => 'NUVIJQI5CI2YATM2JN',
-'user_key' => 'JHZR2RACCU5V2JV26MS3CPZ3WRBTDSWXBHASXSY6HUKIHRNHOR');
 
-
-$url = 'https://www.eventbriteapi.com/v3/organizations/1199095923193/events/?token=QJZUZA45G5SFQSPKYER4';
+$url = 'https://www.eventbriteapi.com/v3/organizations/1199095923193/events/?token=token';
 
 $resp = file_get_contents($url); // returns true only if http response code < 400
 
